@@ -1,4 +1,6 @@
+"use client";
 import Image from "next/image";
+import { Button, Card, CardBody } from "@heroui/react";
 
 export default function Home() {
   return (
@@ -24,6 +26,17 @@ export default function Home() {
             Save and see your changes instantly.
           </li>
         </ol>
+
+        {/* HeroUI Test Components */}
+        <Card className="max-w-[400px]">
+          <CardBody>
+            <h3 className="text-xl font-bold mb-2">HeroUI integrado exitosamente</h3>
+            <p className="mb-4">Los componentes de HeroUI están funcionando correctamente en tu proyecto Next.js.</p>
+            <Button color="primary">
+              Botón de prueba HeroUI
+            </Button>
+          </CardBody>
+        </Card>
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
           <a
