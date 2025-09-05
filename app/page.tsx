@@ -30,10 +30,10 @@ export default function Home() {
         {/* HeroUI Test Components */}
         <Card className="max-w-[400px]">
           <CardBody>
-            <h3 className="text-xl font-bold mb-2">HeroUI integrado exitosamente</h3>
-            <p className="mb-4">Los componentes de HeroUI están funcionando correctamente en tu proyecto Next.js.</p>
+            <h3 className="text-xl font-bold mb-2">HeroUI successfully integrated</h3>
+            <p className="mb-4">HeroUI components are working correctly in your Next.js project.</p>
             <Button color="primary">
-              Botón de prueba HeroUI
+              Button test
             </Button>
           </CardBody>
         </Card>
