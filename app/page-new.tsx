@@ -19,14 +19,14 @@ import {
 
 export default function Home() {
   const [name, setName] = useState("");
-  const [message, setMessage] = useState("¡Hola Mundo! 🌎");
+  const [message, setMessage] = useState("Hello World! 🌎");
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   const handleGreeting = () => {
     if (name.trim()) {
-      setMessage(`¡Hola ${name}! 🎉 Bienvenido a HeroUI + Tailwind v4`);
+      setMessage(`Hello ${name}! 🎉 Welcome to HeroUI + Tailwind v4`);
     } else {
-      setMessage("¡Hola Mundo! 🌎 Por favor ingresa tu nombre");
+      setMessage("Hello World! 🌎 Please enter your name");
     }
   };
 
@@ -35,7 +35,7 @@ export default function Home() {
       {/* Header */}
       <header className="w-full p-6 text-center">
         <h1 className="text-4xl font-bold text-gray-800 dark:text-white mb-2">
-          🚀 Hola Mundo - HeroUI Demo
+          🚀 Hello World - HeroUI Demo
         </h1>
         <p className="text-gray-600 dark:text-gray-300">
           Next.js + HeroUI + Tailwind CSS v4 + TypeScript
@@ -69,8 +69,8 @@ export default function Home() {
               }}
             />
             <div className="flex flex-col">
-              <p className="text-lg font-semibold">Saludo Interactivo</p>
-              <p className="text-small text-default-500">Ingresa tu nombre</p>
+              <p className="text-lg font-semibold">Interactive Greeting</p>
+              <p className="text-small text-default-500">Enter your name</p>
             </div>
           </CardHeader>
           <CardBody className="space-y-4">
@@ -81,8 +81,8 @@ export default function Home() {
             </div>
             
             <Input
-              label="Tu nombre"
-              placeholder="Escribe tu nombre aquí..."
+              label="Your name"
+              placeholder="Enter your name here..."
               value={name}
               onChange={(e) => setName(e.target.value)}
               variant="bordered"
@@ -102,7 +102,7 @@ export default function Home() {
                 className="flex-1"
                 size="lg"
               >
-                👋 Saludar
+                👋 Greet
               </Button>
               <Button 
                 color="secondary" 
@@ -120,7 +120,7 @@ export default function Home() {
               onClick={() => setName("")}
               className="w-full"
             >
-              🔄 Limpiar
+              🔄 Clear
             </Button>
           </CardBody>
         </Card>
@@ -132,7 +132,7 @@ export default function Home() {
               <div className="text-3xl mb-2">⚡</div>
               <h3 className="font-semibold mb-2">Tailwind CSS v4</h3>
               <p className="text-small text-default-500">
-                CSS-first approach con mejor rendimiento
+                CSS-first approach with better performance
               </p>
             </CardBody>
           </Card>
@@ -142,7 +142,7 @@ export default function Home() {
               <div className="text-3xl mb-2">🎨</div>
               <h3 className="font-semibold mb-2">HeroUI Components</h3>
               <p className="text-small text-default-500">
-                Componentes modernos y accesibles
+                Modern and accessible components
               </p>
             </CardBody>
           </Card>
@@ -152,7 +152,7 @@ export default function Home() {
               <div className="text-3xl mb-2">🚀</div>
               <h3 className="font-semibold mb-2">Next.js 15</h3>
               <p className="text-small text-default-500">
-                Con Turbopack para desarrollo rápido
+                With Turbopack for fast development
               </p>
             </CardBody>
           </Card>
@@ -174,34 +174,34 @@ export default function Home() {
           {(onClose) => (
             <>
               <ModalHeader className="flex flex-col gap-1">
-                🎉 ¡Información del Proyecto!
+                🎉 Project Information!
               </ModalHeader>
               <ModalBody>
                 <div className="space-y-4">
                   <div>
-                    <h4 className="font-semibold mb-2">🔧 Stack Tecnológico:</h4>
+                    <h4 className="font-semibold mb-2">🔧 Tech Stack:</h4>
                     <ul className="space-y-1 text-small">
-                      <li>• <strong>Next.js 15.5.2</strong> - Framework de React</li>
-                      <li>• <strong>HeroUI v2.8+</strong> - Librería de componentes</li>
-                      <li>• <strong>Tailwind CSS v4</strong> - Framework de CSS</li>
-                      <li>• <strong>TypeScript</strong> - Tipado estático</li>
-                      <li>• <strong>Framer Motion</strong> - Animaciones</li>
+                      <li>• <strong>Next.js 15.5.2</strong> - React Framework</li>
+                      <li>• <strong>HeroUI v2.8+</strong> - Component Library</li>
+                      <li>• <strong>Tailwind CSS v4</strong> - CSS Framework</li>
+                      <li>• <strong>TypeScript</strong> - Static Typing</li>
+                      <li>• <strong>Framer Motion</strong> - Animations</li>
                     </ul>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-2">✨ Características:</h4>
+                    <h4 className="font-semibold mb-2">✨ Features:</h4>
                     <ul className="space-y-1 text-small">
-                      <li>• Componentes modernos y accesibles</li>
-                      <li>• Tema claro/oscuro automático</li>
-                      <li>• Diseño responsivo</li>
-                      <li>• Animaciones suaves</li>
+                      <li>• Modern and accessible components</li>
+                      <li>• Automatic light/dark theme</li>
+                      <li>• Responsive design</li>
+                      <li>• Smooth animations</li>
                     </ul>
                   </div>
                 </div>
               </ModalBody>
               <ModalFooter>
                 <Button color="primary" onPress={onClose}>
-                  ¡Entendido!
+                  Got it!
                 </Button>
               </ModalFooter>
             </>
